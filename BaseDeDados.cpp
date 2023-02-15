@@ -4,11 +4,11 @@
 using namespace std;
 
 int main() {
-    ifstream original_file("BaseDeDados.txt", ios::in);
+    ifstream original_file("Base08.csv", ios::in);
     ofstream temp_file("temp.bin", ios::out | ios::binary);
 
     if (!original_file.is_open() || !temp_file.is_open()) {
-        cerr << "Error opening file" << endl;
+        cout << "Error opening file" << endl;
         return 1;
     }
 
@@ -20,8 +20,8 @@ int main() {
     original_file.close();
     temp_file.close();
 
-    remove("BaseDeDados.txt");
-    rename("temp.bin", "data.txt");
+    remove("Base08.csv");
+    rename("temp.bin", "Base08.csv");
 
     return 0;
 }
